@@ -1,13 +1,5 @@
 <% @posts.each do |post| %>
-    <% if user_signed_in? %>
-        <%= post.user.email %><br><br/>
-        <%= post.title %><br><br/>
-        <%= post.body %><br><br/>
-    <% else %>
-        <%= post.title %><br><br/>
-        <%= post.body %><br><br/>
-    <% end %>
-        
+    <%= post_info(post) %>
 <% end %>
 
 <% if user_signed_in? %>
